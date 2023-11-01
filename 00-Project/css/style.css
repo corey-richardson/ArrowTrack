@@ -25,6 +25,10 @@ body {
     justify-content: center;
 }
 
+.elem {
+    margin: 0 2%;
+}
+
 .elem span {
     display: flex;
 }
