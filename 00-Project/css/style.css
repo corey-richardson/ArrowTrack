@@ -80,22 +80,27 @@ a:last-child {
     border-radius: 5px;
 }
 
-footer {
+#footer {
     text-align: center;
     position: sticky;
     bottom: 0;
     margin-bottom: 10px;
 }
   
-footer h5, footer p, footer a {
+#footer h5, #ooter p, #footer a {
     margin: 0;
     font-size: small;
     display: inline-block;
     color: white;
 }
 
-footer a {
+#footer a {
     text-decoration: none;
     border-radius: 5px;
     padding: 0 2px;
+}
+
+#header {
+    position: sticky;
+    bottom: 1;
 }
