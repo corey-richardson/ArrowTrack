@@ -82,8 +82,8 @@ a:last-child {
 
 #footer {
     text-align: center;
-    position: sticky;
-    bottom: 0;
+    /* position: sticky;
+    bottom: 0; */
     margin-bottom: 10px;
 }
   
