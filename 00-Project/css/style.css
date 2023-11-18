@@ -3,7 +3,8 @@
     --background: #ffffff;
     --primary: #2f2f2f;
     --secondary: #969696;
-    --accent: #f65300;
+    --accent: #ffff00;
+    /* --accent: #f65300; */ /* alternative accent of orange */
 }
 
 /* Path: 00-Project/css/style.css */
@@ -40,7 +41,7 @@ header span, footer span {
 
 header > h1 {
     font-size: 1.5rem;
-    color: white;
+    color: var(--background);
     text-align: center;
     padding: 5px 5px;
     padding-top: 15px;
@@ -72,7 +73,7 @@ header > h1 {
 }
 
 .navbar-container a {
-    color: white;
+    color: var(--background);
     padding: 0 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -112,7 +113,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: var(--background);
     border-radius: 3px;
     padding: 0 5px;
 }
@@ -120,5 +121,6 @@ footer a {
 footer a:hover {
     font-weight: bold;
     background-color: var(--secondary);
-    color: var(--accent);
+    color: var(--background);
+    /* background-image: radial-gradient(circle, yellow, red, blue, black, white); */ /* <-- awful idea but i love it */
 }
