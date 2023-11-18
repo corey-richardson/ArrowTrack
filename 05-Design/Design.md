@@ -9,3 +9,5 @@ When the screen width is less than this critical value, the webpage should respo
 ![](/05-Design/02-NarrowWidth.jpg)
 
 See `repo:2023-web-development-bootcamp` for notes and examples.
+
+> *Implemented 18/11/23 ✔️*
