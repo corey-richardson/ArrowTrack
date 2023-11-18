@@ -38,3 +38,23 @@ See `repo:2023-web-development-bootcamp` for notes and examples.
 For ultrawide displays, all three sections could be displayed alongside each other. Try a value of ~2500px.
 
 Work in the [`ultrawide`](https://github.com/corey-richardson/COMP1004-Coursework/tree/ultrawide) branch. 
+
+> *Implemented 18/11/23 ✔️*
+
+The webpage now has "critical values" at widths `992px` and `2560px`. These are the values where the webpage will switch between the narrow/moble, wide and ultrawide layouts.
+
+## `991px`
+![](/05-Design/res/2023-11-18_991px.png)
+Uses the narrow/mobile layout. All sections are listed in a single column. The Header Navigation Bar and Footer External Links are listed in a single column.
+
+## `992px`
+![](/05-Design/res/2023-11-18_992px.png)
+Uses the wide layout. The View Page section holds 100% of the screen width whilst the Add Section and Edit Section share the screen width equally. The Header Navigation Bar and Footer External Links are listed in a single *row* and get seperated by a left border (except first item).
+
+## `2559px`
+![](/05-Design/res/2023-11-18_2559px.png)
+Same as previous, next critical value has not been reached.
+
+## `2560px`
+![](/05-Design/res/2023-11-18_2560px.png)
+Uses the ultrawide layout. All sections share the screen width equally.
