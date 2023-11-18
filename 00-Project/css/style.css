@@ -1,106 +1,124 @@
 :root {
     --text: #130e01;
     --background: #ffffff;
-    --primary: #009c4e;
-    --secondary: #006600;
-    --accent: #d9a520;
+    --primary: #2f2f2f;
+    --secondary: #969696;
+    --accent: #f65300;
 }
 
-
 /* Path: 00-Project/css/style.css */
+
+/* Always Design for Mobile First 
+Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices). 
+Instead of changing styles when the width gets smaller than 992px, we should change the design when the width gets larger than 992px. This will make our design Mobile First */
+/* Typical Device Breakpoints
+Large devices (laptops/desktops, 992px and up)*/
 
 * {
     font-family: "Lucida Grande", "Lucida Sans Unicode";
     padding: 0;
+    margin: 0;
     color: var(--text);
 }
 
 body {
-    margin: 0 2%;
-}
-
-.main {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.elem {
-    margin: 0 2%;
-}
-
-.elem span {
-    display: flex;
-}
-
-.elem h1, a {
-    color: white;
-    text-align: center;
-}
-
-.elem a{
-    width: 30%;
-    background-color: var(--primary);
-    border: none;
-    border-radius: 5px;
-    padding: 0 5px;
-    text-align: center;
-    flex-grow: 1;
-    margin: 5px 0;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: bold;
-    background-color: var(--secondary);
-}
-
-a:last-child {
-    margin-right: 0;
-}
-
-.section-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
+}
+
+header {
     background-color: var(--primary);
-    border: solid --secondary;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.footer-container {
-    width: 100%;
-    background-color: var(--primary);
-    border-radius: 5px;
-}
-
-#footer {
-    text-align: center;
-    /* position: sticky;
-    bottom: 0; */
-    margin-bottom: 10px;
-}
-  
-#footer h5, #ooter p, #footer a {
-    margin: 0;
-    font-size: small;
-    display: inline-block;
-    color: white;
-}
-
-#footer a {
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 0 2px;
-}
-
-#header {
+    /* border-radius: 10px; */
     position: sticky;
     bottom: 1;
+}
+
+header span, footer span {
+    color: var(--accent);
+}
+
+header > h1 {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    padding-top: 15px;
+}
+
+@media (min-width: 992px) {
+    header > h1 {
+        font-size: 1.85rem;
+    }
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+@media (min-width: 992px) {
+    .navbar-container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+    }
+}
+
+.navbar-container li, footer li {
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.navbar-container a {
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.navbar-container a:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.container {
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.flexible-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .flexible-container {
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+footer a:hover {
+    font-weight: bold;
+    background-color: var(--secondary);
+    color: var(--accent);
 }
