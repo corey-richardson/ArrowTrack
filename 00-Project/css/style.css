@@ -96,14 +96,6 @@ footer li:first-child {
     border-radius: 10px;
 }
 
-/* Flexbox */
-/* https://www.w3schools.com/css/css3_flexbox.asp */
-.flexbox {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 footer {
     background-color: var(--primary);
     text-align: center;
@@ -114,7 +106,43 @@ footer {
     background-image: radial-gradient(circle, rgba(255,255,0,0.2) 0%, rgba(255,0,0,0.2) 25%, rgba(0,4,255,0.2) 50%, rgba(0,0,0,0.2) 75%, rgba(255,255,255,0.2) 100%);
 }
 
-/* Wide display specific styling (mobile first design) */
+/* Flexbox */
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* To visualise the following media queries, use::after
+Google Chrome Development Tools > Three Dots > Show Media Queries */
+
+/* View Page should take up the full width for the narrow and wide layout designs.
+It should only be split with the rest of the flex box items in the ultrawide layout.
+This sets it 'default behaviour. */
+#view-page {
+    flex-basis: 100%; /* Take full width */
+}
+
+/* Wide Layout 
+Each flexbox item now takes up 40% of the screen.
+The View Page maintains its 100% width as another ruleset with higher specificity overrules this. */
+@media (min-width: 992px) {
+    .container {
+        flex: 40%;
+    }
+}
+
+/* Ultrawide Layout
+All containers, including the View Page, are now displayed in the same row. */
+@media (min-width: 2560px) {
+    .container, #view-page {
+        flex-basis: 30%;
+    }
+}
+
+/* Wide / Ultrawide display specific styling (mobile first design) */
 @media (min-width: 992px) {
     .navbar-container {
         flex-direction: row;
