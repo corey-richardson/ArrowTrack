@@ -26,6 +26,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-width: 480px;
 }
 
 header {
@@ -47,25 +48,11 @@ header > h1 {
     padding-top: 15px;
 }
 
-@media (min-width: 992px) {
-    header > h1 {
-        font-size: 1.85rem;
-    }
-}
-
 .navbar-container {
     display: flex;
     align-items: center;
     flex-direction: column;
 } 
-
-@media (min-width: 992px) {
-    .navbar-container {
-        flex-direction: row;
-        justify-content: center;
-        padding: 15px;
-    }
-}
 
 .navbar-container li, footer li {
     list-style: none;
@@ -98,17 +85,13 @@ header > h1 {
     flex-direction: column;
 }
 
-@media (min-width: 992px) {
-    .flexible-container {
-        flex-direction: row;
-    }
-}
-
 footer {
     background-color: var(--primary);
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
+
+    background-image: radial-gradient(circle, rgba(255,255,0,0.2) 0%, rgba(255,0,0,0.2) 25%, rgba(0,4,255,0.2) 50%, rgba(0,0,0,0.2) 75%, rgba(255,255,255,0.2) 100%);
 }
 
 footer a {
@@ -123,4 +106,27 @@ footer a:hover {
     background-color: var(--secondary);
     color: var(--background);
     /* background-image: radial-gradient(circle, yellow, red, blue, black, white); */ /* <-- awful idea but i love it */
+}
+
+@media (min-width: 992px) {
+    .navbar-container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .flexible-container {
+        flex-direction: row;
+    }
+
+    header > h1 {
+        font-size: 1.85rem;
+    }
+
+    .flexible-container > li {
+        border-left: solid var(--accent) 1px;
+    }
+    .flexible-container > li:first-child {
+        border: none;
+    }
 }
