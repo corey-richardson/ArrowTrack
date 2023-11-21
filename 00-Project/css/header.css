@@ -1,0 +1,19 @@
+header {
+    background-color: var(--primary);
+    border-radius: 0 0 10px 10px;
+}
+
+header span, footer span {
+    color: var(--accent);
+}
+
+header h1 {
+    font-size: 1.5rem; /* changes to 2 rem in wide layout*/
+    color: var(--background);
+    text-align: center;
+    padding-top: 15px;
+}
+
+#wide-title {
+    display: none;
+}

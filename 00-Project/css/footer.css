@@ -1,0 +1,14 @@
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    border-radius: 10px 10px 0 0;
+
+    background-image: radial-gradient(circle, rgba(255,255,0,0.2) 0%, rgba(255,0,0,0.2) 25%, rgba(0,4,255,0.2) 50%, rgba(0,0,0,0.2) 75%, rgba(255,255,255,0.2) 100%);
+}
+
+footer li:first-child {
+    padding-top: 10px;
+    text-decoration: underline solid var(--background) 1px;
+}

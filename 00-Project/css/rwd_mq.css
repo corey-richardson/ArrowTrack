@@ -1,0 +1,67 @@
+/* To visualise the following media queries, use::after
+Google Chrome Development Tools > Three Dots > Show Media Queries */
+
+/* View Page should take up the full width for the narrow and wide layout designs.
+It should only be split with the rest of the flex box items in the ultrawide layout.
+This sets it 'default behaviour. */
+#view-page {
+    flex-basis: 100%; /* Take full width */
+}
+
+/* Wide / Ultrawide display specific styling (mobile first design) */
+@media (min-width: 992px) {
+    #wide-title {
+        display: block;
+    }
+    #narrow-title {
+        display: none;
+    }
+
+    .navbar-container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    /* Each flexbox item now takes up 40% of the screen.
+    The View Page maintains its 100% width as another ruleset 
+    with higher specificity overrules this. */
+    .container {
+        flex: 40%;
+    }
+
+    .flexbox {
+        flex-direction: row;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Direct children only */
+    .flexbox > li {
+        border-left: solid var(--accent) 1px;
+    }
+    .flexbox > li:first-child {
+        border: none;
+    }
+
+    /* These elements only need top-bottom padding when the webpage is in mobile/narrow layout
+    and the elements are displayed as a single column */
+    /* The first li element does not need to be underlined here like it is in the mobile layout */
+    .navbar-container li:last-child {
+        padding-bottom: 0;
+    }
+    footer li:first-child {
+        padding-top: 0;
+        text-decoration: none;
+    }
+}
+
+/* Ultrawide Layout
+All containers, including the View Page, are now displayed in the same row. */
+@media (min-width: 2560px) {
+    .container, #view-page {
+        flex-basis: 30%;
+    }
+}

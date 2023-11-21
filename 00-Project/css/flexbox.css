@@ -1,0 +1,47 @@
+/* Flexbox */
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.navbar-container li, footer li {
+    list-style: none; /* no markers */
+    padding: 0 5px;
+}
+
+/* When the webpage is in the mobile styling (single column), the last navigation link and the first
+external link need some extra padding */
+/* I also want the first li element of the footer to be underlined in this layout */
+.navbar-container li:last-child {
+    padding-bottom: 10px;
+}
+
+.navbar-container a, footer a {
+    color: var(--background);
+    padding: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navbar-container a:hover, footer a:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.container {
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+/* Flexbox */
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
