@@ -1,0 +1,188 @@
+:root {
+    --text: #130e01;
+    --background: #ffffff;
+    --primary: #2f2f2f;
+    --secondary: #969696;
+    --accent: #ffff00;
+}
+
+/*
+Target Yellow ffff00
+AGB Red       dd2835
+YB Blue       0080fe
+Merlin Orange f65300
+*/
+
+/* Path: 00-Project/css/style.css */
+
+/* Always Design for Mobile First 
+Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices). 
+Instead of changing styles when the width gets smaller than 992px, we should change the design when the width gets larger than 992px. This will make our design Mobile First */
+/* Typical Device Breakpoints
+Large devices (laptops/desktops, 992px and up)*/
+
+* {
+    font-family: "Lucida Grande", "Lucida Sans Unicode";
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+}
+
+body {
+    /* Setup to ensure the footer will stick to the bottom if there is not enough content to fill
+    the entire height of the screen */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+header {
+    background-color: var(--primary);
+    border-radius: 0 0 10px 10px;
+}
+
+header span, footer span {
+    color: var(--accent);
+}
+
+header h1 {
+    font-size: 1.5rem; /* changes to 2 rem in wide layout*/
+    color: var(--background);
+    text-align: center;
+    padding-top: 15px;
+}
+
+#wide-title {
+    display: none;
+}
+
+/* Flexbox */
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.navbar-container li, footer li {
+    list-style: none; /* no markers */
+    padding: 0 5px;
+}
+
+/* When the webpage is in the mobile styling (single column), the last navigation link and the first
+external link need some extra padding */
+/* I also want the first li element of the footer to be underlined in this layout */
+.navbar-container li:last-child {
+    padding-bottom: 10px;
+}
+footer li:first-child {
+    padding-top: 10px;
+    text-decoration: underline solid var(--background) 1px;
+}
+
+.navbar-container a, footer a {
+    color: var(--background);
+    padding: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navbar-container a:hover, footer a:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.container {
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    border-radius: 10px 10px 0 0;
+
+    background-image: radial-gradient(circle, rgba(255,255,0,0.2) 0%, rgba(255,0,0,0.2) 25%, rgba(0,4,255,0.2) 50%, rgba(0,0,0,0.2) 75%, rgba(255,255,255,0.2) 100%);
+}
+
+/* Flexbox */
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* To visualise the following media queries, use::after
+Google Chrome Development Tools > Three Dots > Show Media Queries */
+
+/* View Page should take up the full width for the narrow and wide layout designs.
+It should only be split with the rest of the flex box items in the ultrawide layout.
+This sets it 'default behaviour. */
+#view-page {
+    flex-basis: 100%; /* Take full width */
+}
+
+/* Wide / Ultrawide display specific styling (mobile first design) */
+@media (min-width: 992px) {
+    #wide-title {
+        display: block;
+    }
+    #narrow-title {
+        display: none;
+    }
+
+    .navbar-container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    /* Each flexbox item now takes up 40% of the screen.
+    The View Page maintains its 100% width as another ruleset 
+    with higher specificity overrules this. */
+    .container {
+        flex: 40%;
+    }
+
+    .flexbox {
+        flex-direction: row;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Direct children only */
+    .flexbox > li {
+        border-left: solid var(--accent) 1px;
+    }
+    .flexbox > li:first-child {
+        border: none;
+    }
+
+    /* These elements only need top-bottom padding when the webpage is in mobile/narrow layout
+    and the elements are displayed as a single column */
+    /* The first li element does not need to be underlined here like it is in the mobile layout */
+    .navbar-container li:last-child {
+        padding-bottom: 0;
+    }
+    footer li:first-child {
+        padding-top: 0;
+        text-decoration: none;
+    }
+}
+
+/* Ultrawide Layout
+All containers, including the View Page, are now displayed in the same row. */
+@media (min-width: 2560px) {
+    .container, #view-page {
+        flex-basis: 30%;
+    }
+}
