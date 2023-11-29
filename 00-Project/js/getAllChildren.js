@@ -41,6 +41,14 @@ function getAllChildren() {
             isNovelty:"Standard"
         },
         {
+            type:"Target",
+            brand:"A-Frame",
+            condition:"Okay",
+            value:35.00,
+            quantity:5,
+            targetType:"Stand"
+        },
+        {
             type:"Workshop",
             brand:"Bowmaster Portable Bow Press",
             condition:"Good",

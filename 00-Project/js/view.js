@@ -8,11 +8,10 @@ for (let i = 0; i < length; i++) // for each elem
 {
     let text = "";
 
-    // Custom Rules
-    // Common Rules
+    // Common Parsing Rules
     viewElements[i].value = "£" + viewElements[i].value.toFixed(2);
 
-
+    // Custom Parsing Rules
     switch (viewElements[i].type)
     {
         case "Arrows":
@@ -22,18 +21,21 @@ for (let i = 0; i < length; i++) // for each elem
             viewElements[i].poundage = viewElements[i].poundage + "#";
             break;
         case "Target":
-             // Combine target size and spots into name
-            viewElements[i].brand = viewElements[i].brand + " " + viewElements[i].size_cm + "cm " + viewElements[i].isThreeSpot;
-            delete viewElements[i].size_cm;
-            delete viewElements[i].isThreeSpot;
-            // Only display isNovelty if true
-            if (viewElements[i].isNovelty == "Standard")
-            {
-                delete viewElements[i].isNovelty;
-            } 
             // Combine Target and Target Type into a single attribute
             viewElements[i].type = "Target " + viewElements[i].targetType;
             delete viewElements[i].targetType;
+            if (viewElements[i].type == "Target Face")
+            {
+                // Combine target size and spots into name
+                viewElements[i].brand = viewElements[i].brand + " " + viewElements[i].size_cm + "cm " + viewElements[i].isThreeSpot;
+                delete viewElements[i].size_cm;
+                delete viewElements[i].isThreeSpot;
+                // Only display isNovelty if true
+                if (viewElements[i].isNovelty == "Standard")
+                {
+                    delete viewElements[i].isNovelty;
+                }
+            } 
             break;
     }
 

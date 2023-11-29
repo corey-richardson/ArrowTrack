@@ -22,7 +22,7 @@ const testData = [
         type:"Arrows",
         brand:"Easton ACC",
         condition:"Good",
-        value:20.00,
+        value:18.00,
         quantity:10,
         length:28.5,
         spine:630
@@ -37,6 +37,14 @@ const testData = [
         size_cm:60,
         isThreeSpot:"Three Spot", // Use boolean input forms but convert to text for readabilty
         isNovelty:"Standard"
+    },
+    {
+        type:"Target",
+        brand:"A-Frame",
+        condition:"Okay",
+        value:35.00,
+        quantity:5,
+        targetType:"Stand"
     },
     {
         type:"Workshop",
