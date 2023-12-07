@@ -2,7 +2,7 @@ const viewElements = getAllChildren();
 
 let length = viewElements.length;
 
-const tbl = document.getElementById("view-page-table"); 
+const viewContainer = document.getElementById("view-container"); 
 
 for (let i = 0; i < length; i++) // for each elem
 {
@@ -11,40 +11,17 @@ for (let i = 0; i < length; i++) // for each elem
     // Common Parsing Rules
     viewElements[i].value = "£" + viewElements[i].value.toFixed(2);
 
-    // Custom Parsing Rules
-    switch (viewElements[i].type)
-    {
-        case "Arrows":
-            viewElements[i].length = viewElements[i].length.toFixed(1);
-            break;
-        case "Bow":
-            viewElements[i].poundage = viewElements[i].poundage + "#";
-            break;
-        case "Target":
-            // Combine Target and Target Type into a single attribute
-            viewElements[i].type = "Target " + viewElements[i].targetType;
-            delete viewElements[i].targetType;
-            if (viewElements[i].type == "Target Face")
-            {
-                // Combine target size and spots into name
-                viewElements[i].brand = viewElements[i].brand + " " + viewElements[i].size_cm + "cm " + viewElements[i].isThreeSpot;
-                delete viewElements[i].size_cm;
-                delete viewElements[i].isThreeSpot;
-                // Only display isNovelty if true
-                if (viewElements[i].isNovelty == "Standard")
-                {
-                    delete viewElements[i].isNovelty;
-                }
-            } 
-            break;
-    }
+    // Create HTML string
+    text = text
+    + "<h2>" + viewElements[i].brand + "</h2>"
+    + "<h4> - " + viewElements[i].location + ", " + viewElements[i].value + " x " + viewElements[i].quantity + "</h4>"
+    + "<br><p>" + viewElements[i].condition + " condtion, " + viewElements[i].notes + "</p>" 
+    + "<style>h2, h4 { display: inline; } h4 { font-weight: normal; } </style>";
 
-    for (let attr in viewElements[i]) 
-    {
-        text += "<td>" + viewElements[i][attr] + "</td>";
-    }
-
-    const tblr = document.createElement("tr");
-    tblr.innerHTML = text;
-    tbl.appendChild(tblr);
+    // Create DOM object
+    const elemContainer = document.createElement("div");
+    elemContainer.classList.add("elem-container");
+    // Add created DOM element to view-container
+    elemContainer.innerHTML = text;
+    viewContainer.appendChild(elemContainer);
 }

@@ -45,3 +45,14 @@ external link need some extra padding */
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+
+/* Containerisation styling for view elements */
+.elem-container {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--primary);
+}
+
+.elem-container:last-child {
+    border-bottom: none;
+}

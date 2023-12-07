@@ -2,70 +2,66 @@ function getAllChildren() {
 
     const testData = [
         {
-            type:"Bow",
             brand:"PSE Stinger ATK",
             condition:"Good",
             value:327.00,
             quantity:1,
-            bowstyle:"Compound",
-            poundage:50,
-            handed:"Right Handed"
+            location:"Widewell",
+            notes:"Compound 50# Right Handed"
         },
         {
-            type:"Arrows",
             brand:"Easton X7",
             condition:"Good",
-            value:115.00,
+            value:15.00,
             quantity:8,
-            length:28.5,
-            spine:2014
+            location:"YMCA",
+            notes:"28.5\" 2014"
         },
         {
-            type:"Arrows",
             brand:"Easton ACC",
             condition:"Good",
-            value:175,
+            value:18,
             quantity:10,
-            length:28.5,
-            spine:630
+            location:"Widewell",
+            notes:"28.5\" 630"
         },
         {
-            type:"Target",
-            brand:"WA",
+            brand:"WA 60cm Face",
             condition:"Used",
             value:0.28,
             quantity:25,
-            targetType:"Face",
-            size_cm:60,
-            isThreeSpot:"Three Spot", // Use boolean input forms but convert to text for readabilty
-            isNovelty:"Standard"
+            location:"YMCA",
+            notes:"Three Spot"
         },
         {
-            type:"Target",
-            brand:"A-Frame",
+            brand:"A-Frame Stand",
             condition:"Okay",
             value:35.00,
             quantity:5,
-            targetType:"Stand"
+            location:"Widewell",
+            notes:""
         },
         {
-            type:"Workshop",
             brand:"Bowmaster Portable Bow Press",
             condition:"Good",
             value:100.00,
-            quantity:1
+            quantity:1,
+            location:"Widewell",
+            notes:""
         },
         {
             type:"PPE",
             brand:"Arm Guard",
             condition:"Okay",
             value:5.00,
-            quantity:10
+            quantity:10,
+            location:"Widewell",
+            notes:""
         }
         
     ];
 
-    testData.sort((a, b) => (a.type > b.type ? 1 : -1));
+    testData.sort((a, b) => (a.brand > b.brand ? 1 : -1));
 
     return testData;
 }
