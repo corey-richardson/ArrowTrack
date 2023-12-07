@@ -64,4 +64,11 @@ All containers, including the View Page, are now displayed in the same row. */
     .container, #view-page {
         flex-basis: 30%;
     }
+    /* Hide navbar when in UWD layout as all sections are already at the top of the page */
+    .navbar-container {
+        display: none;
+    }
+    header {
+        padding-bottom: 10px;
+    }
 }
