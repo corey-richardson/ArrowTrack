@@ -1,20 +1,18 @@
 fetch("./static/items.json")
     .then(response => {
-        console.log(response);
         return response.json();
     })
     .then(viewElements => {
 
         let length = viewElements.length;
         viewElements.sort((a, b) => (a.brand > b.brand ? 1 : -1));
-
         const viewContainer = document.getElementById("view-container"); 
 
         for (let i = 0; i < length; i++) // for each elem
         {
             let text = "";
 
-            // Common Parsing Rules
+            // Formatting
             viewElements[i].value = "£" + viewElements[i].value.toFixed(2);
 
             // Create HTML string

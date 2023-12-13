@@ -1,10 +1,9 @@
+// See view.js block comment for 'fetch' details
 fetch("./static/items.json")
     .then(response => {
-        console.log(response);
         return response.json();
     })
     .then(jsonElements => {
-        console.log(jsonElements);
         // _all is prefixed with an underscore as it should not be displayed to the user
         // the underscore should hopefully be immeadiatley obvious on the webpage if this rule is not followed
         const locations = {"_all" : 0.0};
@@ -17,7 +16,6 @@ fetch("./static/items.json")
                 locations[object.location] = 0.0;
             }
         }
-        console.log(locations);
 
         for (let obj in jsonElements) {
             let object = jsonElements[obj];
@@ -46,7 +44,6 @@ fetch("./static/items.json")
             }
 
             text += " | " + loc + ": £" + locations[loc].toFixed(2);
-            console.log("Here")
         }
 
         // Create DOM object and style it
