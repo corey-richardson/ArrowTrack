@@ -5,7 +5,7 @@ fetch("./static/items.json")
     .then(viewElements => {
 
         let length = viewElements.length;
-        viewElements.sort((a, b) => (a.brand > b.brand ? 1 : -1));
+        viewElements.sort((a, b) => (a.name > b.name ? 1 : -1));
         const viewContainer = document.getElementById("view-container"); 
 
         for (let i = 0; i < length; i++) // for each elem
@@ -17,7 +17,7 @@ fetch("./static/items.json")
 
             // Create HTML string
             text = text
-            + "<h2>" + viewElements[i].brand + "</h2>"
+            + "<h2>" + viewElements[i].name + "</h2>"
             + "<h4> - " + viewElements[i].location + ", " + viewElements[i].value + " x " + viewElements[i].quantity + "</h4>"
             + "<br><p>" + viewElements[i].condition + " condtion, " + viewElements[i].notes + "</p>" 
             + "<style>h2, h4 { display: inline; } h4 { font-weight: normal; } </style>";
