@@ -5,7 +5,15 @@
         "value":327.00,
         "quantity":1,
         "location":"Widewell",
-        "notes":"Compound 50# Right Handed"
+        "notes":"30-50#, RH, Charcoal"
+    },
+    {
+        "name":"PSE Lazer 2024",
+        "condition":"Great",
+        "value":732.00,
+        "quantity":1,
+        "location":"Widewell",
+        "notes":"40-50#, RH, Black riser with white limbs"
     },
     {
         "name":"Easton X7",
@@ -13,15 +21,15 @@
         "value":15.00,
         "quantity":8,
         "location":"YMCA",
-        "notes":"28.5\" 2014"
+        "notes":"28\", 2014"
     },
     {
         "name":"Easton ACC",
         "condition":"Good",
         "value":18,
-        "quantity":10,
+        "quantity":11,
         "location":"Widewell",
-        "notes":"28.5\" 630"
+        "notes":"28\", 3-04 680"
     },
     {
         "name":"WA 60cm Face",
@@ -44,15 +52,6 @@
         "condition":"Good",
         "value":100.00,
         "quantity":1,
-        "location":"Widewell",
-        "notes":""
-    },
-    {
-        "type":"PPE",
-        "name":"Arm Guard",
-        "condition":"Okay",
-        "value":5.00,
-        "quantity":10,
         "location":"Widewell",
         "notes":""
     }

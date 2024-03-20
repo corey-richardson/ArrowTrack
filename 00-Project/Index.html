@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/rwd_mq.css">
+        <link rel="stylesheet" href="css/form.css">
 
         <title>ArrowTrack:</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,16 +42,48 @@
                     <h1>View the Inventory</h1>
 
                     <!-- This is where each object will get displayed -->
-                    <div class="container" id="view-container"></div>
-
-                    <script src="js/view.js" charset="utf-8"></script>
-                    <script src="js/calculateValue.js" charset="utf-8"></script>
+                    <div id="view-container"></div>
 
                 </div>
 
                 <div class="container" id="add-page">
                     <h1>Add a New Item</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <form id="add-form" method="post">
+                        <div>
+                            <input type="text" id="name" name="name"  placeholder="Item" required>
+                        </div>
+
+                        <div>
+                            <select id="condition" name="condition" placeholder="Condition" required>
+                                <option selected disabled hidden>Condition</option>
+                                <option value="Great">Great</option>
+                                <option value="Good">Good</option>
+                                <option value="Okay">Okay</option>
+                                <option value="Poor">Poor</option>
+                                <option value="Unsafe">Unsafe</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="number" id="value" name="value" step="0.01" placeholder="Value (each)" required>
+                        </div>
+
+                        <div>
+                            <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+                        </div>
+
+                        <div>
+                            <input type="text" id="location" name="location" placeholder="Location" required>
+                        </div>
+
+                        <div>
+                            <textarea id="notes" name="notes" placeholder="Further Notes"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="container" id="edit-page">
@@ -72,5 +105,9 @@
             </div>
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/view.js" charset="utf-8"></script>
+        <script src="js/addForm.js" charset="utf-8"></script>
+        <script src="js/calculateValue.js" charset="utf-8"></script>
     </body>
 </html>
