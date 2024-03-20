@@ -37,7 +37,7 @@ See `repo:2023-web-development-bootcamp` for notes and examples.
 
 For ultrawide displays, all three sections could be displayed alongside each other. Try a value of ~2500px.
 
-Work in the [`ultrawide`](https://github.com/corey-richardson/COMP1004-Coursework/tree/ultrawide) branch. 
+Work in the [`ultrawide`](https://github.com/corey-richardson/ArrowTrack/tree/ultrawide) branch. 
 
 > *Implemented 18/11/23 ✔️*
 
