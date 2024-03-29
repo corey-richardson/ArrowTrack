@@ -1,10 +1,7 @@
 $(document).ready(function () {
     $("#add-form").on("submit", function(event) {
-        event.preventDefault();
-        console.log("submitted!");
-        
+        event.preventDefault();   
         let formData = new FormData(this);
-        console.log(formData);
 
         const newItem = {};
 
@@ -18,8 +15,6 @@ $(document).ready(function () {
             }
         }
 
-        console.log(newItem);
-
         // Get existing items from local browser storage
         // If empty, create an empty list
         let storedItems = JSON.parse(localStorage.getItem('items')) || [];
@@ -29,9 +24,6 @@ $(document).ready(function () {
         // Store the updated list
         localStorage.setItem('items', JSON.stringify(storedItems));
 
-        console.log(JSON.parse(localStorage.getItem('items')));
-
         window.location.reload();
-
     });
 });

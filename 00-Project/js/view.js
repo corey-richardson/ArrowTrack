@@ -1,6 +1,5 @@
 // Get JSON data from local browser storage
 let storedItems = JSON.parse(localStorage.getItem('items'));
-console.log(storedItems);
 
 if (storedItems) // db not empty
 {
