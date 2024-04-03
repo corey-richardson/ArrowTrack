@@ -15,6 +15,8 @@ $(document).ready(function () {
             }
         }
 
+        newItem["checkedOut"] = "false";
+
         // Get existing items from local browser storage
         // If empty, create an empty list
         let storedItems = JSON.parse(localStorage.getItem('items')) || [];
