@@ -10,6 +10,8 @@ $(document).ready(function () {
         // Similar implementation to:
         // https://github.com/corey-richardson/course-progress-tracker/blob/main/mysite/app.py
         // ...but using flat file db instead of SQL :/
+        // OR https://github.com/corey-richardson/yelverton-bowmen-scoreboard
+        // which uses session browser storage to hold the db
         event.preventDefault();
 
         // Ensure latest version of db in memory
