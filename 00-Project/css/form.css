@@ -6,3 +6,10 @@ input, select, textarea, button {
     min-width: 80%;
     margin: 0 5px;
 }
+
+.form-container {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1rem;
+}

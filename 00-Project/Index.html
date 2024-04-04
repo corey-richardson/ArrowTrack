@@ -48,103 +48,111 @@
 
                 <div class="container" id="add-page">
                     <h1>Add a New Item</h1>
-                    <form id="add-form" method="post">
-                        <div>
-                            <input type="text" id="name" name="name"  placeholder="Item" required>
-                        </div>
 
-                        <div>
-                            <select id="condition" name="condition" placeholder="Condition" required>
-                                <option selected disabled hidden>Condition</option>
-                                <option value="Great">Great</option>
-                                <option value="Good">Good</option>
-                                <option value="Okay">Okay</option>
-                                <option value="Poor">Poor</option>
-                                <option value="Unsafe">Unsafe</option>
-                            </select>
-                        </div>
+                    <div class="form-container">
+                        <form id="add-form" method="post">
+                            <div>
+                                <input type="text" id="name" name="name"  placeholder="Item" required>
+                            </div>
 
-                        <div>
-                            <input type="number" id="value" name="value" step="0.01" placeholder="Value (each)" required>
-                        </div>
+                            <div>
+                                <select id="condition" name="condition" placeholder="Condition" required>
+                                    <option selected disabled hidden>Condition</option>
+                                    <option value="Great">Great</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Okay">Okay</option>
+                                    <option value="Poor">Poor</option>
+                                    <option value="Unsafe">Unsafe</option>
+                                </select>
+                            </div>
 
-                        <div>
-                            <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
-                        </div>
+                            <div>
+                                <input type="number" id="value" name="value" step="0.01" placeholder="Value (each)" required>
+                            </div>
 
-                        <div>
-                            <input type="text" id="location" name="location" placeholder="Location" required>
-                        </div>
+                            <div>
+                                <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+                            </div>
 
-                        <div>
-                            <textarea id="notes" name="notes" placeholder="Further Notes"></textarea>
-                        </div>
+                            <div>
+                                <input type="text" id="location" name="location" placeholder="Location" required>
+                            </div>
 
-                        <div>
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
+                            <div>
+                                <textarea id="notes" name="notes" placeholder="Further Notes"></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
 
                 <div class="container" id="edit-page">
                     <h1>Edit an Existing Item</h1>
-                    <form id="edit-form" method="post">
 
-                        <select id="item-to-edit" name="item-to-edit" required>
-                            <option selected disabled hidden>Item to Edit</option>
-                        </select>
+                    <div class="form-container">
+                        <form id="edit-form" method="post">
 
-                        <div>
-                            <select id="checkedOut" name="checkedOut">
-                                <option value="false" selected hidden>Check Out this item?</option>
-                                <option value="true">True</option>
-                                <option value="false">False</option>
+                            <select id="item-to-edit" name="item-to-edit" required>
+                                <option selected disabled hidden>Item to Edit</option>
                             </select>
-                        </div>
 
-                        <div>
-                            <select id="delete" name="delete">
-                                <option value="false" selected hidden>Remove this item?</option>
-                                <option value="true">True</option>
-                                <option value="false">False</option>
-                            </select>
-                        </div>
+                            <div>
+                                <select id="checkedOut" name="checkedOut">
+                                    <option value="false" selected hidden>Check Out this item?</option>
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
+                            </div>
 
-                        <div>
-                            <input type="text" id="name" name="name"  placeholder="Update Item">
-                        </div>
+                            <div>
+                                <select id="delete" name="delete">
+                                    <option value="false" selected hidden>Remove this item?</option>
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
+                            </div>
 
-                        <div>
-                            <select id="condition" name="condition">
-                                <option selected disabled hidden>Update Condition</option>
-                                <option value="Great">Great</option>
-                                <option value="Good">Good</option>
-                                <option value="Okay">Okay</option>
-                                <option value="Poor">Poor</option>
-                                <option value="Unsafe">Unsafe</option>
-                            </select>
-                        </div>
+                            <div>
+                                <input type="text" id="name" name="name"  placeholder="Update Item">
+                            </div>
 
-                        <div>
-                            <input type="number" id="value" name="value" step="0.01" placeholder="Update Value (each)">
-                        </div>
+                            <div>
+                                <select id="condition" name="condition">
+                                    <option selected disabled hidden>Update Condition</option>
+                                    <option value="Great">Great</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Okay">Okay</option>
+                                    <option value="Poor">Poor</option>
+                                    <option value="Unsafe">Unsafe</option>
+                                </select>
+                            </div>
 
-                        <div>
-                            <input type="number" id="quantity" name="quantity" placeholder="Update Quantity">
-                        </div>
+                            <div>
+                                <input type="number" id="value" name="value" step="0.01" placeholder="Update Value (each)">
+                            </div>
 
-                        <div>
-                            <input type="text" id="location" name="location" placeholder="Update Location">
-                        </div>
+                            <div>
+                                <input type="number" id="quantity" name="quantity" placeholder="Update Quantity">
+                            </div>
 
-                        <div>
-                            <textarea id="notes" name="notes" placeholder="Update Notes"></textarea>
-                        </div>
+                            <div>
+                                <input type="text" id="location" name="location" placeholder="Update Location">
+                            </div>
 
-                        <div>
-                            <button type="submit">Submit</button>
-                        </div> 
-                    </form>
+                            <div>
+                                <textarea id="notes" name="notes" placeholder="Update Notes"></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit">Submit</button>
+                            </div> 
+                        </form>
+                    </div>
+
                 </div>
 
             </div>
