@@ -3,6 +3,8 @@ let storedItems = JSON.parse(localStorage.getItem('items'));
 
 if (storedItems) // db not empty
 {
+    // Iterate through each item in the local browser storage db
+    // Append each item to the view page, containerised in a unique div.
     for (let i = 0; i < storedItems.length; i++)
     {
         $("#view-page").append($(
@@ -14,10 +16,9 @@ if (storedItems) // db not empty
             + "<hr></div>"
         ));
         
-        console.log(storedItems[i].name, storedItems[i].checkedOut);
+        // Modify the background colour of any "checked out" items
         if (storedItems[i].checkedOut == "true")
         {
-            console.log(".viewContainer" + i);
             $("#viewContainer" + i).css({
                 "background-color" : "#a1a1a1"
             });
