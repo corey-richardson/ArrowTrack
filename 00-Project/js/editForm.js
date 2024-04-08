@@ -20,7 +20,8 @@ $(document).ready(function () {
 
         let itemNameToModify = formData.get("item-to-edit");
 
-        for (let [key, value] of formData.entries()) {
+        for (let [key, value] of formData.entries()) 
+        {
             // Handle item deletion
             if (key == "delete" && value == "true")
             {
@@ -32,14 +33,13 @@ $(document).ready(function () {
                     {
                         // Remove from array and write new array to local storage
                         storedItems.splice(i, 1);
-                        localStorage.setItem('items', JSON.stringify(storedItems));
                         break;
                     }
                 }
                 break; // Item deleted, no need to check other attributes
             }
 
-            // For each key that has a value assinged (form field not left empty)
+            // For each key that has a value assigned (form field not left empty)
             if (value)
             {
                 // Find the matching item in the db
