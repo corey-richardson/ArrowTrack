@@ -41,6 +41,4 @@ requiring the data into `.then()` blocks following the `fetch()` funciton calls.
 
 <br>
 
-- [WakaTime 2023-12-13](https://wakatime.com/@coreyrichardson/projects/ndvtnsilnw?start=2023-12-13&end=2023-12-13)
-
 See further in [LocalStorage](/03-Notes/LocalStorage.md).
