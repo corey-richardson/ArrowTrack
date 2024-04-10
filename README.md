@@ -13,3 +13,18 @@ ArrowTrack: An Inventory Management System for archers and archery clubs.
 - [ ] Coursework (80%, 80 marks, 2024-04-18)
 
 ---
+
+Your final portfolio comprises the following items:
+- A representation of your final project plan. This should illustrate your backlog and sprints.
+  - [GitHub Projects: ArrowTrack:](https://github.com/users/corey-richardson/projects/4)
+- A complete set of UML diagrams to represent your application.
+  - [/06-Diagrams](/06-Diagrams/)
+- A completed and finished GitHub repo. The readme file must outline your project.
+  - [ArrowTrack GitHub Repository](https://github.com/corey-richardson/ArrowTrack)
+- A poster illustrating the key features of your application and the architecture.
+  - [Poster](/09-Poster/)
+- A reflective account of approximately 500 words considering the issues and challenges
+arising from the project.
+  - [Included in Submitted Report](/08-Report/Report.pdf)
+
+---
