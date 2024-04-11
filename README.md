@@ -2,7 +2,14 @@
 
 ArrowTrack: An Inventory Management System for archers and archery clubs.
 
-[![wakatime](https://wakatime.com/badge/user/55c30436-1509-4eb9-9f18-fa9b7c6060c4/project/018e5d49-5600-4dd5-a6cd-2e12e45322ea.svg)](https://wakatime.com/badge/user/55c30436-1509-4eb9-9f18-fa9b7c6060c4/project/018e5d49-5600-4dd5-a6cd-2e12e45322ea)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+
+[![wakatime](https://wakatime.com/badge/github/corey-richardson/ArrowTrack.svg)](https://wakatime.com/badge/github/corey-richardson/ArrowTrack)
 
 ---
 
@@ -10,11 +17,14 @@ ArrowTrack: An Inventory Management System for archers and archery clubs.
 
 - [assessment](#assessment)
 - [project-vision](#project-vision)
+- [project-overview](#project-overview)
 - [using-the-application](#using-the-application)
 - [responsive-web-design](#responsive-web-design)
 - [project-poster](#project-poster)
 
 ---
+
+## Statuses
 
 - [ ] Practice (20%, 20 marks)
   - [x] Interim Video (30%, 6 marks, 2024-01-15) 
@@ -47,6 +57,25 @@ arising from the project.
 ## Project Vision
 
 > This project could be used by archers and archery clubs to track and help maintain the equipment they hold. This would also be useful to track the value of the inventory to assist in insurance calculations, and track the items that may need replacing to help with budgeting.
+
+---
+
+## Project Overview
+
+As an archer and club committee member myself, I recognised the need for a tool that could be
+easily used to track owned items and their conditions for the purpose of maintenance and
+budget allocation for replacement equipment, for both individuals and clubs within the archery
+community, or even other sports communities.
+
+ArrowTrack was designed with the goal of addressing these needs.
+
+For individuals, the application provides a tool to monitor the condition of their equipment,
+ensuring longevity and performance, thus saving money in the long term on damages. For clubs
+where club-owned equipment can be spread across multiple indoor and outdoor ranges, or on
+loan out to club members trialling different bow setups, the ArrowTrack tool can be used to
+manage this in one centralised tool. ArrowTrack’s total cost and by-location cost functionalities
+can be especially helpful to club treasurers and equipment officers, assisting in insurance
+estimations and budget planning.
 
 ---
 
