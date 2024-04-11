@@ -15,12 +15,15 @@ ArrowTrack: An Inventory Management System for archers and archery clubs.
 
 ## Contents
 
+- [statuses](#statuses)
 - [assessment](#assessment)
 - [project-vision](#project-vision)
 - [project-overview](#project-overview)
+- [license](#license)
 - [using-the-application](#using-the-application)
 - [responsive-web-design](#responsive-web-design)
 - [project-poster](#project-poster)
+- [project-structure](#project-structure)
 
 ---
 
