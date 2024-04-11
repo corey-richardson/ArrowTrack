@@ -79,6 +79,36 @@ estimations and budget planning.
 
 ---
 
+## License
+
+- [MIT License](/LICENSE)
+
+```
+MIT License
+
+Copyright (c) 2023 Corey Richardson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
 ## Using the Application
 
 1. When first opening the single-page application, there will be no items in the database to display.
@@ -133,3 +163,37 @@ The application utilises Flexboxes to cater to a variety of screen sizes. This e
 
 - [Project Poster Directory](/09-Poster/)
 - [Project Poster](/09-Poster/) <!-- UPDATE ME -->
+
+---
+
+## Project Structure
+
+```
+- 00-Project
+  - css
+    - flexbox.css
+    - footer.css
+    - form.css
+    - header.css
+    - rwd_mq.css
+    - style.css
+
+  - js
+    - addForm.js
+    - calculateValue.js
+    - editForm.js
+    - view.js
+
+  - lib
+    - jquery.min.js /* jQuery is included locally as it allows for offline use;
+                       this is important for the use case of the project as it
+                       is likely for archery ranges to be in areas with poor 
+                       signal / low bandwidth. This allows all dependencies to
+                       be installed even when the user hasn't already got an
+                       instance of jQuery in cache. */
+
+  - res
+    - icon.png
+
+  - index.html
+```
