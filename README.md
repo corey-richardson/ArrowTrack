@@ -50,7 +50,7 @@ Your final portfolio comprises the following items:
   - [Project Folder](/00-Project/)
   - [ArrowTrack GitHub Repository](https://github.com/corey-richardson/ArrowTrack)
 - A poster illustrating the key features of your application and the architecture.
-  - [Poster](/09-Poster/) <!-- UPDATE ME -->
+  - [Project Poster](/09-Poster/Poster.pdf)
 - A reflective account of approximately 500 words considering the issues and challenges
 arising from the project.
   - [Included in Submitted Report](/08-Report/Report.pdf)
@@ -165,7 +165,7 @@ The application utilises Flexboxes to cater to a variety of screen sizes. This e
 ## Project Poster
 
 - [Project Poster Directory](/09-Poster/)
-- [Project Poster](/09-Poster/) <!-- UPDATE ME -->
+- [Project Poster](/09-Poster/Poster.pdf)
 
 ---
 
