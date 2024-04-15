@@ -152,6 +152,14 @@ SOFTWARE.
 - ![](/08-Report/readme-res/11-Unsafe_filled.png)
 - ![](/08-Report/readme-res/12-Unsafe_submitted.png)
 
+6. The Web Application allows you to Download the current database and Upload a new one. This feature is useful when migrating between devices.
+- ![](/08-Report/readme-res/13-FileIO.png)
+- Clicking `Choose File` will open a file dialog menu which will allow the user to choose a JSON file to upload.
+- ![](/08-Report/readme-res/14-File_Dialog.png)
+- ![](/08-Report/readme-res/15-Uploaded.png)
+- Clicking `Download Database` will open a file dialog menu which will allow the user to decide where the JSON file gets downloaded to on their local machine.
+- ![](/08-Report/readme-res/16-DownloadDialog.png)
+
 ---
 
 ## Responsive Web Design
@@ -185,6 +193,7 @@ The application utilises Flexboxes to cater to a variety of screen sizes. This e
     - addForm.js
     - calculateValue.js
     - editForm.js
+    - files.js
     - view.js
 
   - lib
